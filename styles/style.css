@@ -16,21 +16,16 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
+  overflow: hidden;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
-  height: 568px;
+  background-color: blue;
   width: 568px;
-}
-
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+  height: 568px;
+  position: absolute;
+  top: 64px;
+  right: 0;
 }
 
 .logo {
@@ -46,7 +41,7 @@
   z-index: 2;
 }
 
-.title {
+.header__title {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -61,7 +56,7 @@
   z-index: 2;
 }
 
-.subtitle {
+.header__subtitle {
   line-height :25px;
   font-size: 18px;
   width: 388px;
@@ -75,11 +70,7 @@
   color: blue;
 }
 
-.flex-column {
-  display: flex;
-  align-items:center;
-}
-.main_illustration {
+.header__main_illustration {
   width: 765px;
   height: 608px;
   position: absolute;
@@ -88,26 +79,28 @@
   z-index: 1;
 }
 
-.square-pic {
-  background-color: blue;
-  width: 568px;
-  height: 568px;
-  position: absolute;
-  top: 64px;
-  right: 0;
+.flex-column {
+  display: flex;
+  align-items:center;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 30px;
 }
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
 .two-columns {
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin:100px auto;
+  margin: 100px auto;
 }
+
 .two-columns__brif {
   line-height: 1.2;
   font-size: 18px;
@@ -115,6 +108,7 @@ p {
   width: 175px;
   color: blue;
 }
+
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
@@ -164,6 +158,7 @@ p {
   margin-left: auto;
   margin-right: auto;
 }
+
 .table {
   display: flex;
   flex-wrap: wrap;
@@ -205,11 +200,10 @@ p {
   display: flex;
   position: relative;
   flex-direction: column;
-  height: 100vh;
+  height: 790px;
 }
 
 .feynman__title {
-  display: flex;
   width: 648px;
   margin: 0;
   padding: 0;
@@ -222,12 +216,13 @@ p {
   text-align: center;
 }
 
-.feynman__cubtitle {
+.feynman__subtitle {
   align-self: center;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
   z-index: 1;
+  margin-top: 0;
 }
 
 .feynman__link {
@@ -260,13 +255,15 @@ p {
   color:white;
 }
 
-.table__cell_them_dark {
+.table__cell_theme_dark {
   width: 200px;
+  color: white;
+  margin-right: 0;
   margin-top: 80px;
   z-index: 1;
 }
 
-.table__cell_them_dark:last-of-type{
+.table__cell_theme_dark:last-of-type{
   margin-bottom: 90px;
 }
 
@@ -280,7 +277,12 @@ p {
   right: -210px;
 }
 
-.table__theme_top {
+.kaufman__theme_dark {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.kaufman__theme_dark:first-of-type {
   margin-top: 90px;
 }
 
@@ -292,7 +294,8 @@ p {
   padding-top: 60px;
 }
 
-.columns {
+.footer__columns {
+  color: white;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -300,7 +303,19 @@ p {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
+  justify-content: space-between
+
+}
+
+.column__content_copyright {
   flex-basis: 711px;
+}
+
+.column__content_info{
+
+}
+
+.column__content_social {
 }
 
 .column-heading {
@@ -313,47 +328,42 @@ p {
 
 .column-links {
   display: flex;
-  display: wrap-reverse;
   flex-direction: column;
-  width: 50%;
-  color: white;
   text-decoration: none;
-  align-items: flex-end;
+  color: white;
+  margin-bottom: 10px;
 }
 
+.column-links:last-of-type {
+  padding-bottom: 16px;
+}
+
+.column__link_inline {
+  text-align: left;
+  margin-bottom: 10px;
+  flex-direction: row;
+}
 .logo_place_footer {
- position: absolute;
- left: 0;
- top: 0;
  width: 183px;
  height: 35px;
 }
 
-.author {
+.footer__author {
   position: absolute;
   bottom: 18px;
   left: 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
-  color: white;
   padding-top: 18px;
   padding-bottom: 18px;
 }
 
-  .social-icon {
+.social-icon {
     width: 16px;
     height: 16px;
     margin-right: 10px;
   }
-  .column-link {
-    display: inline;
-    text-align: left;
-    margin-bottom: 10px;
-  }
 
-  .column-link:last-of-type {
-    padding-bottom: 16px;
-  }
 
 
