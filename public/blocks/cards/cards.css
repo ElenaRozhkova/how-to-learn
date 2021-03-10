@@ -1,0 +1,15 @@
+.cards {
+  width: 920px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  list-style:none;
+  padding-left: 0;
+  box-sizing: border-box;
+}
+
+.cards :nth-child(3n){
+  margin-right: 0;
+}
