@@ -1,15 +1,13 @@
 .video__iframes {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  background-color: brown;
-  width: 1050px;
+  justify-content: center;
   margin-top: 50px;
+  position: relative;
+  z-index: 10;
 }
 
-.video__iframes :nth-child(2n){
-  margin-right: 0;
-}
+
