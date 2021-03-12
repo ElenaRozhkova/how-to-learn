@@ -1,10 +1,10 @@
 .resources__logo{
   width: 270px;
   height: 38px;
+  transition: opacity 1s ease-out, transform 1s ease-in-out;
 }
 
 .resources__logo:hover {
   transform: scale(1.1);
-  transition: opacity 1s ease-out, transform 1s ease-in-out;
   border: 1px solid #cecdcf;
   border-radius: 8px;}
